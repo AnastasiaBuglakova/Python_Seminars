@@ -30,18 +30,33 @@
 # - список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # - список: [], ищем: "123", ответ: -1
 
-my_list = []
-search = input('Please, enter string of symbols: ')
-position=0
-print(my_list)
+# my_list = []
+# search = input('Please, enter string of symbols: ')
+# position=0
+# count = 0
+# for item in my_list:
+#     if search==item:
+#         count +=1
+#     if count == 2:
+#         break
+#     position+=1
+# if count >=2:
+#     print(position)
+# else:
+#     print('-1')
+# второй вариант решения
+
+inputed = "qwe"
+search = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
 count = 0
-for item in my_list:
-    if search==item:
-        count +=1
-    if count == 2:
+for i in range(len(search)):
+    if search[i] == inputed and count<2:
+        count+=1
+        continue
+    if search[i] == inputed and count==2:
+        print(i)
         break
-    position+=1
-if count >=2:
-    print(position)
 else:
-    print('-1')
+    print(-1)
+    
+

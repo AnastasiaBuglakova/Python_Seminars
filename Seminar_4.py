@@ -52,3 +52,11 @@ def solution(koef: list):
         return None
 
 print(solution(create_koef(equation)))
+
+poer = 0
+for i in range(10):
+	poer +=i
+    print(poer)
+else:
+    poer -= 100
+print(poer)
